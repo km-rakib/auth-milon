@@ -23,7 +23,7 @@ const Login = () => {
             a id nisi.
           </p>
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 w-1/3 shrink-0 shadow-2xl">
           <form onSubmit={handleSubmit} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -59,7 +59,7 @@ const Login = () => {
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
-          <p className="text-xs font-semibold text-center px-4 py-2 bg-purple-100  ">New to this website ! please <NavLink to="/signup" ><span className="text-primary">Signup</span></NavLink> </p>
+          <p className="text-xs font-semibold text-center rounded-b-2xl px-4 py-2 bg-purple-100  ">New to this website ! please <NavLink to="/signup" ><span className="text-primary">Signup</span></NavLink> </p>
         </div>
       </div>
     </div>
