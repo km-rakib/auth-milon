@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Signup = () => {
+
+
+  const {createUser} = useContext(AuthContext)
+
   const handleSignup = (e) => {
     e.preventDefault();
     console.log("Signup");
@@ -10,6 +15,13 @@ const Signup = () => {
     const username = e.target.username.value;
     const password = e.target.password.value;
     console.log(name, email, username, password);
+    createUser(email,password)
+    .then(result => {
+      console.log(result.user)
+    })
+    .catch(error => {
+      console.log("ERROR", error.message)
+    })
     e.target.reset();
   };
   return (

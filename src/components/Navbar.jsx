@@ -6,7 +6,7 @@ const Navbar = () => {
 
 
   // const authInfo = useContext(AuthContext)
-  const {name} = useContext(AuthContext)
+  const {name,age} = useContext(AuthContext)
   console.log(name)
 
   return (
@@ -60,7 +60,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn"> {name} </a>
+        <a className="btn"> {name} {age} </a>
       </div>
     </div>
   );
