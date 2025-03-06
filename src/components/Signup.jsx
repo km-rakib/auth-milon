@@ -3,9 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Signup = () => {
-
-
-  const {createUser} = useContext(AuthContext)
+  const { createUser } = useContext(AuthContext);
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -15,13 +13,13 @@ const Signup = () => {
     const username = e.target.username.value;
     const password = e.target.password.value;
     console.log(name, email, username, password);
-    createUser(email,password)
-    .then(result => {
-      console.log(result.user)
-    })
-    .catch(error => {
-      console.log("ERROR", error.message)
-    })
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log("ERROR", error.message);
+      });
     e.target.reset();
   };
   return (
@@ -33,36 +31,40 @@ const Signup = () => {
         action=""
       >
         <label className="input input-bordered flex items-center gap-2">
-          <input 
+          <input
             required
-            type="text" 
+            type="text"
             name="name"
-            className="grow" 
-            placeholder="Name" />
+            className="grow"
+            placeholder="Name"
+          />
         </label>
         <label className="input input-bordered flex items-center gap-2">
           <input
-            required 
-            type="text"
-            name="email" 
-            className="grow" 
-            placeholder="Email" />
-        </label>
-        <label className="input input-bordered flex items-center gap-2">
-          <input 
             required
-            type="text" 
-            name="username"
-            className="grow" 
-            placeholder="Username" />
+            type="text"
+            name="email"
+            className="grow"
+            placeholder="Email"
+          />
         </label>
         <label className="input input-bordered flex items-center gap-2">
-          <input 
-          required
-          type="password"
-          name="password" 
-          className="grow" 
-          placeholder="Password" />
+          <input
+            required
+            type="text"
+            name="username"
+            className="grow"
+            placeholder="Username"
+          />
+        </label>
+        <label className="input input-bordered flex items-center gap-2">
+          <input
+            required
+            type="password"
+            name="password"
+            className="grow"
+            placeholder="Password"
+          />
         </label>
         <div className="form-control mt-2">
           <button className="btn btn-neutral">Signup</button>
@@ -70,7 +72,7 @@ const Signup = () => {
       </form>
       <div className="w-2/5 mx-auto space-y-4">
         <p className="text-xs font-semibold text-center px-4 py-2 rounded-md bg-purple-100  ">
-          Already have an account ? please 
+          Already have an account ? please
           <NavLink to="/login">
             <span className="text-primary"> Login</span>
           </NavLink>
