@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -24,10 +24,10 @@ const Home = () => {
               Stay updated with exclusive stories, interviews, and behind-the-scenes content.
             </p>
             <div className="space-x-4">
-              <button className="btn btn-primary bg-gradient-to-r from-blue-600 to-indigo-600 border-0 hover:from-blue-700 hover:to-indigo-700">
+              <button className="btn btn-primary bg-gradient-to-r from-blue-600 to-indigo-600 border-0 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">
                 Get Started
               </button>
-              <button className="btn btn-outline border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
+              <button className="btn btn-outline border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300">
                 Learn More
               </button>
             </div>
