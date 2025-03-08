@@ -15,7 +15,6 @@ const Home = () => {
             <h1 className="text-6xl font-extrabold text-gray-800 leading-tight">
               Discover Amazing
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                {" "}
                 Content
               </span>
             </h1>
