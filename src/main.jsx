@@ -9,6 +9,8 @@ import Home from "./components/Home.jsx";
 import Login from "./components/Login.jsx";
 import Signup from "./components/Signup.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
+import Orders from "./components/Orders.jsx";
+import PrivateRoute from "./routes/PrivateRoute.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <Signup></Signup>,
       },
+      {
+        path: "/orders",
+        element: <PrivateRoute> <Orders></Orders> </PrivateRoute>
+      }
     ],
   },
 ]);

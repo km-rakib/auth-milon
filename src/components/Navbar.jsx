@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 px-28">
       <div className="navbar-start">
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +53,11 @@ const Navbar = () => {
             <li>
               <NavLink to="/signup">Signup</NavLink>
             </li>
+            <li>
+              <NavLink to="/orders">Orders</NavLink>
+            </li>
           </ul>
-        </div>
+        </div> */}
         <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -68,6 +71,12 @@ const Navbar = () => {
           <li>
             <NavLink to="/signup">Signup</NavLink>
           </li>
+          {/* <li>
+            <NavLink to="/orders">Orders</NavLink>
+          </li> */}
+          {
+            user && <> <NavLink to="/orders">Orders</NavLink> </>
+          }
         </ul>
       </div>
       <div className="navbar-end">
